@@ -1,0 +1,48 @@
+<% include ../admin/header %>
+
+    <!-- 路径导航 -->
+    <!--<ol class="breadcrumb">
+        <li>
+            <a href="#">管理员管理</a>
+        </li>
+        <li class="active">
+			<a href="">添加管理员</a>
+		</li>
+    </ol>-->
+    <!-- 路径导航 END -->
+
+    <!-- 表单 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+				<h1 style="text-align: center;line-height: 200px;">管理员注册</h1>
+                <form action="/test/adminInsert" class="userForm" method="POST">
+                    <div class="input-group dl">
+                        <span class="input-group-addon bt">用户</span>
+                        <input type="text" class="form-control k" name="username">
+                    </div>
+                    <div class="input-group dl">
+                        <span class="input-group-addon bt">密码</span>
+                        <input type="password" class="form-control k" name="password">
+                    </div>
+
+                    <div class="input-group dl">
+                        <span class="input-group-addon bt">电话</span>
+                        <input type="text" class="form-control k" name="tel">
+                    </div>
+
+                    <div class="input-group dl">
+                        <input  id="sb" type="submit" value="注册">
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+    </div>
+    <!-- 表单 end -->
+
+<% include ../admin/footer %>

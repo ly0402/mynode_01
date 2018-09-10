@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="/web/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="/web/css/style1.css" type="text/css" rel="stylesheet" media="all">
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="/web/js/jquery-1.11.1.min.js"></script> 
+<!-- //js -->
+<!-- font-awesome icons -->
+<link href="/web/css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- start-smooth-scrolling-->
+<script type="text/javascript" src="/web/js/move-top.js"></script>
+<script type="text/javascript" src="/web/js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+		
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smooth-scrolling-->	
+</head>
+<body>
+	<!--banner-->
+	<div class="banner">
+		<div class="header"><!--header-->
+			<div class="container">		
+				<nav class="navbar navbar-default" role="navigation">
+										<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1 class="navbar-brand"><a  href="index.html">LY</a></h1>
+					</div>
+					<div class="box">
+						<div class="container-4">
+							<form>
+								<input type="search" id="search" placeholder="Search..." />
+								<button class="icon"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</div>
+					<!--navbar-header-->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right cl-effect-4">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Type <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a class="hvr-bounce-to-bottom" href="about.html">State</a></li>
+									<li><a class="hvr-bounce-to-bottom" href="about.html">Prop</a></li>
+									<li><a class="hvr-bounce-to-bottom" href="about.html">Num</a></li>      
+								</ul>
+							</li>
+							<li><a href="codes.html">All</a></li>
+							<li><a href="gallery.html">Rank</a></li>
+							<li><a href="contact.html">Ak</a></li>							
+							<li><a href="contact.html">Free</a></li>
+
+						</ul>	
+						<div class="clearfix"> </div>	
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--//header-->
+		<!--banner-text-->
+		<!--<div class="banner-text">-->
+
+<div class="container">
+  <div class="row" style="margin-top:100px">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+							<a href="/alie">退出</a>
+						</div>
+								<h1><%=articleList.title%></h1>
+								<h3><%=articleList.keywords%></h3>
+						   	<img src="/<%=articleList.imgurl%>"/>
+								<p><%=articleList.description%></p>
+								
+	
+								
+				
+						  
+						  
+           
+          </div>          
+        </div>
+  </div>
+</div>
+
+
+<% include ./footer%>

@@ -1,0 +1,76 @@
+		</div>
+	</div>
+	<!--//about-team-->
+	<!--background-shape-->
+	<div class="background-shape">
+	</div>
+	<!--background-shape-->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-row">
+				<div class="col-md-6 footer-logo">
+					<h5><a href="index.html"> LY</a></h5>
+				</div>
+				<div class="col-md-6 footer-nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html" >Type</a></li>
+						<li><a href="codes.html">State</a></li>
+						<li><a href="gallery.html">Prop</a></li>
+						<li><a href="contact.html">Num</a></li>
+					</ul>	
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="footer-bottom">
+				<div class="col-md-4 footer-grids">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam.</p>
+					<h6>consectetur<a href="#"> Christ Richard.</a> </h6>
+				</div>
+				<div class="col-md-4 footer-grids footer-mdl">
+					<!--友情链接-->
+					<% linksList.forEach(function(val){%>
+						<a style="color:white" href="<%=val.url%>"><%=val.title%></a>
+					<% })%>
+					
+					
+				</div>
+				<div class="col-md-4 footer-grids">
+					<ul>
+						<li class="phn"><i class="fa fa-phone"></i>1111-111-111</li>
+						<li><a href="mailto:example@mail.com"><i class="fa fa-envelope-o"></i> mail@example.com</a></li>
+					</ul>
+					<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="ly">LY书斋</a> - Collect from <a href="http://www.cssmoban.com/" title="ly" target="_blank">LY书斋</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--footer-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/web/js/bootstrap.js"></script>
+</body>
+</html>

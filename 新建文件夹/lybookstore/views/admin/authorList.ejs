@@ -1,0 +1,58 @@
+<% include ./header %>
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">作家管理</a>
+        </li>
+        <li class="active">
+            <a href="">作家列表</a>
+        </li>
+    </ol>
+    <!-- 路径导航 END -->
+
+
+    <table class="table table-hover authorList">
+        <tr>
+            <td>美照</td>
+            <td>作家名号</td>
+            
+            <td>加入时间</td>
+            <td>代表作</td>
+            <td>操作</td>
+        </tr>
+        <% authorlist.forEach(function(val){ %>
+            <tr id="tr">
+                <td>
+                    <div class="fm">
+                        <img src="/<%=val.imgurl%>" alt="">
+                    </div>
+                </td>
+                <td>
+                    <%=val.name%>
+                </td>
+               <!-- <td>
+                    <%=val.itemId.name %>
+                </td>-->
+                <td>
+                    <%=val.ctime.toLocaleString() %>
+                </td>
+                <td>
+                    <%=val.keywords%>
+                </td>
+                <td>
+                    <!-- 编辑 -->
+                        <a href="/admin/authorEdit/<%=val._id%>">编辑</a>
+                    <!-- 编辑END -->
+                    |
+                    <!-- 删除 -->
+                        <a href="/admin/authorRemove/<%=val._id%>">删除</a>
+                        <!-- 由于电脑不支持，所以未做弹框效果 -->
+                        <!-- onclick="return confirm('您确认要删除吗？')" -->
+                    <!-- 删除END -->
+                </td>
+            </tr>
+            <% })%>
+    </table>
+    
+
+    <% include ./footer %>

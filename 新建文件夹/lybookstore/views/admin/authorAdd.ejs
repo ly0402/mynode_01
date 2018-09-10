@@ -1,0 +1,93 @@
+<% include ./header %>
+
+<!-- 引入 富文本编辑器 -->
+<script src="/ueditor/ueditor.config.js"></script>
+<script src="/ueditor/ueditor.all.min.js"></script>
+
+<!-- 路径导航 -->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">作家管理</a>
+    </li>
+    <li class="active">
+    	<a href="">添加作家</a>
+    </li>
+</ol>
+<!-- 路径导航 END -->
+
+
+<!-- 添加作家 -->
+<div class="container authorAdd">
+   <div class="row">
+       <form action="/admin/authorInsert" method="POST" enctype="multipart/form-data">
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">所&nbsp;属&nbsp;栏&nbsp;目</span>
+                 <!-- <input type="text" name="name">    -->
+                 <!--循环栏目列表
+                 -->
+                 <select name="itemId" id="form-control">
+                    <%itemlist.forEach(function(val){%>
+                      <option value="<%=val._id%>"><%=val.name%></option>
+                    <%})%>
+                    
+               <!--   	<option value="">玄幻</option>
+                 	<option value="">武侠</option>
+                 	<option value="">游戏</option>
+                 	<option value="">灵异</option>
+                 	<option value="">军事</option>
+                 	<option value="">奇幻</option>
+                 	<option value="">军事</option>
+                 	<option value="">仙侠</option>
+                 	<option value="">现实</option>
+                 	<option value="">历史</option>
+                 	<option value="">体育</option>
+                 	<option value="">都市</option> -->
+                 </select>
+            </div>
+       </div>
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">作&nbsp;者&nbsp;名&nbsp;号</span>
+                <input type="text" class="form-control" name="name">
+            </div>
+       </div>
+
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">作&nbsp;家&nbsp;美&nbsp;照 </span>
+                <input type="file" class="form-control" name="imgurl">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">代&nbsp;&nbsp;表&nbsp;&nbsp;作</span>
+                <input type="text" class="form-control" name="keywords">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">作&nbsp;者&nbsp;评&nbsp;价</span>
+                <input type="text" class="form-control" name="description">
+            </div>
+       </div>
+     <!--   <div class="col-md-12 content">
+            <textarea name="content" id="content"></textarea>
+       </div> -->
+       <div class="col-md-6 reset">
+            <input id="reset" type="reset">
+       </div>
+       <div class="col-md-6 submit">
+            <input id="submit" type="submit">
+       </div>
+    </form>
+    </div>
+</div>
+
+<script>
+    // 实例化编辑器
+    var ue = UE.getEditor('content');
+</script>
+
+
+<% include ./footer %>

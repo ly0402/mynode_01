@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>LY书斋</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- VENDOR CSS -->
+		<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/assets/vendor/linearicons/style.css">
+		<link rel="stylesheet" href="/assets/vendor/chartist/css/chartist-custom.css">
+		<!-- MAIN CSS -->
+		<link rel="stylesheet" href="/assets/css/main.css">
+		<!-- 自定义 CSS -->
+		<link rel="stylesheet" href="/assets/css/style.css">
+		<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+		<link rel="stylesheet" href="/assets/css/demo.css">
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+		<!-- ICONS -->
+		<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon.png">
+	</head>
+
+	<body>
+		<!-- 主体 -->
+		<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<!-- 顶部 -->
+			<!-- NAVBAR -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<!-- logo -->
+				<div class="brand">
+					<a href="/"><img src="/assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				</div>
+				<!-- logo END-->
+				<!--  -->
+				<div class="container-fluid">
+					<div class="navbar-btn">
+						<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+					</div>
+					<form class="navbar-form navbar-left">
+						<!-- 搜索框 -->
+						<div class="input-group">
+							<input type="text" value="" class="form-control" placeholder="完美世界">
+							<span class="input-group-btn"><button type="button" class="btn btn-primary">搜索</button></span>
+						</div>
+						<!-- 搜索框 END-->
+					</form>
+					<!-- 版本升级 -->
+					<div class="navbar-btn navbar-btn-right">
+						<a class="btn btn-success update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>版本升级</span></a>
+					</div>
+					<!-- 版本升级 END-->
+
+					<div id="navbar-menu">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+									<i class="lnr lnr-alarm"></i>
+									<span class="badge bg-danger">5</span>
+								</a>
+								<ul class="dropdown-menu notifications">
+									<!-- 铃铛 -->
+
+									<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>系统空间几乎是满的</a></li>
+									<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>你有9个未完成的任务</a></li>
+									<li><a href="#" class="notification-item"><span class="dot bg-success"></span>月度报告新鲜出炉</a></li>
+									<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>1小时的每周例会时间到了</a></li>
+									<li><a href="#" class="notification-item"><span class="dot bg-success"></span>你的请求已经被批准了</a></li>
+									<li><a href="#" class="more">看到所有的通知</a></li>
+								</ul>
+							</li>
+							<!-- 铃铛 END -->
+
+							<!-- 问号 -->
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">基本的使用方法</a></li>
+									<li><a href="#">数据的处理方法</a></li>
+									<li><a href="#">安全保护措施</a></li>
+									<li><a href="#">故障修理方法</a></li>
+								</ul>
+							</li>
+							<!-- 问号 END-->
+
+							<!-- 个人信息 -->
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/images/touxiang.jpg" class="img-circle" alt="Avatar"> <span>书虫</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="lnr lnr-user"></i> <span>我的</span></a></li>
+									<li><a href="#"><i class="lnr lnr-envelope"></i> <span>信息</span></a></li>
+									<li><a href="/admin/setting"><i class="lnr lnr-cog"></i> <span>设置</span></a></li>
+									<li><a href="/test/adminAdd"><i class="lnr lnr-code"></i> <span>注销</span></a></li>
+									<li><a href="/admin/login"><i class="lnr lnr-exit"></i> <span>登录</span></a></li>
+									<!-- 个人信息 END -->
+
+								</ul>
+							</li>
+							<!-- <li>
+								<a class="update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- END NAVBAR -->
+			<!-- END 顶部 -->
+
+			<!-- 左侧的菜单栏 -->
+			<!-- LEFT SIDEBAR -->
+			<div id="sidebar-nav" class="sidebar">
+				<div class="sidebar-scroll">
+					<nav>
+						<ul class="nav">
+							<!-- 首页 -->
+							<li><a href="/index" class="active"><i class="lnr lnr-home"></i> <span>首页</span></a></li>
+							<!-- END 首页 -->
+
+							<!-- 第一个 栏目-->
+							<li>
+								<a href="#lanmu" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>栏目管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+								<div id="lanmu" class="collapse ">
+									<ul class="nav">
+										<li><a href="../admin/itemAdd" class="">添加栏目</a></li>
+										<li><a href="../admin/itemList" class="">栏目列表</a></li>
+									</ul>
+								</div>
+							</li>
+							<!-- 第一个 END-->
+
+
+							<!-- 第二个 小说-->
+							<li>
+								<a href="#xiaoshuo" data-toggle="collapse" class="collapsed"><i class="lnr lnr-text-format"></i> <span>作品管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+								<div id="xiaoshuo" class="collapse ">
+									<ul class="nav">
+										<li><a href="/admin/articleAdd" class="">添加小说</a></li>
+										<li><a href="/admin/articleList" class="">作品列表</a></li>
+									</ul>
+								</div>
+							</li>
+							<!-- 第二个 END-->
+
+							<!-- 第三个 作家-->
+							<li>
+								<a href="#zuojia" data-toggle="collapse" class="collapsed"><i class="lnr lnr-alarm"></i> <span>作家管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+								<div id="zuojia" class="collapse ">
+									<ul class="nav">
+										<li><a href="/admin/authorAdd" class="">添加作家</a></li>
+										<li><a href="/admin/authorList" class="">作家列表</a></li>
+									</ul>
+								</div>
+							</li>
+							<!-- 第三个 END-->
+
+							<!-- 第四个 链接-->
+							<li>
+								<a href="#wailian" data-toggle="collapse" class="collapsed"><i class="lnr lnr-linearicons"></i> <span>外链管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+								<div id="wailian" class="collapse ">
+									<ul class="nav">
+										<li><a href="/admin/linksAdd" class="">添加外链</a></li>
+										<li><a href="/admin/linksList" class="">外链列表</a></li>
+									
+									</ul>
+								</div>
+							</li>
+							<!-- 第四个 END-->
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- END LEFT SIDEBAR -->
+			<!-- 左侧的菜单栏 END-->
+
+			<!-- MAIN -->
+			<div class="main">
+				<!-- MAIN CONTENT -->
+				<div class="main-content">
+					<div class="container-fluid">

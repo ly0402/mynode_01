@@ -1,0 +1,38 @@
+<% include ./header_min %>
+	<div class="bgi">
+		<div class="row min">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<h1 style="text-align: center;line-height: 200px;">管理员注册</h1>
+				<form action="/admin/doLogin" class="userForm" method="POST">
+					<div class="input-group dl">
+						<span class="input-group-addon bt">手&nbsp;&nbsp;机&nbsp;&nbsp;号</span>
+						<input type="text" class="form-control k" name="username" placeholder="请输入手机号"/>
+					</div>					
+					<div class="input-group dl">
+						<span class="input-group-addon bt">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+						<div class="form-control k">
+							<input type="text"  name="order" value="" placeholder="请输入验证码"/>
+							// <a href="">  
+							<img src="/test/code"/> 
+							// </a>
+						</div>
+					</div>
+					<div class="input-group dl">
+						<span class="input-group-addon bt">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+						<input type="password" class="form-control k" name="password" placeholder="请输入密码"/>
+					</div>
+					<div class="input-group dl">
+						<span class="input-group-addon bt">确&nbsp;&nbsp;认&nbsp;&nbsp;密&nbsp;&nbsp;码</span>
+						<input type="password" class="form-control k" name="password" placeholder="请再次输入密码"/>
+					</div>
+					<div class="input-group dl">
+						<input id="sb" type="submit" value="注册"/>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+<% include ./footer_min %>
+                   

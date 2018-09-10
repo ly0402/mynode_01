@@ -1,0 +1,65 @@
+<% include ./header %>
+
+<!-- 引入 富文本编辑器 -->
+<script src="/ueditor/ueditor.config.js"></script>
+<script src="/ueditor/ueditor.all.min.js"></script>
+
+<!-- 路径导航 -->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">外链管理</a>
+    </li>
+    <li class="active">
+    	<a href="">发布外链</a>
+    </li>
+</ol>
+<!-- 路径导航 END -->
+
+
+<!-- 发布外链 -->
+<div class="container linksAdd">
+   <div class="row">
+       <form action="/admin/linksInsert" method="POST">
+    
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">外&nbsp;链&nbsp;标&nbsp;题</span>
+                <input type="text" class="form-control" name="title">
+            </div>
+       </div>
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">外&nbsp;链&nbsp;地&nbsp;址 </span>
+                <input type="text" class="form-control" name="url">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">关&nbsp;&nbsp;键&nbsp;&nbsp;字</span>
+                <input type="text" class="form-control" name="keywords">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">外&nbsp;链&nbsp;描&nbsp;述</span>
+                <input type="text" class="form-control" name="description">
+            </div>
+       </div>
+       
+       <div class="col-md-6 reset">
+            <input id="reset" type="reset">
+       </div>
+       <div class="col-md-6 submit">
+            <input id="submit" type="submit">
+       </div>
+    </form>
+    </div>
+</div>
+
+<script>
+    // 实例化编辑器
+    var ue = UE.getEditor('content');
+</script>
+
+
+<% include ./footer %>

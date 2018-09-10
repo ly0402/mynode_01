@@ -1,0 +1,39 @@
+<% include ./header %>
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">外链管理</a>
+        </li>
+        <li class="active">
+            <a href="">外链列表</a>
+        </li>
+    </ol>
+    <!-- 路径导航 END -->
+		
+	
+			<table class="table">
+				<tr>
+					<td>外链标题</td>
+					<td>外链地址 </td>
+					<td>创建时间</td>
+					<td>进行操作</td>
+				</tr>
+				<% datalist.forEach(function(val){%>
+					<tr>
+						<td><%=val.title%></td>
+						<td><%=val.url%></td>
+						<!-- toLocaleString() 把时间转换成本地格式 -->
+						<td><%=val.ctime.toLocaleString()%></td>
+						<td>
+		
+							<!-- 删除 -->
+								<a href="/admin/linksRemove/<%=val._id%>">删除</a>
+								<!-- 由于电脑不支持，所以未做弹框效果 -->
+								<!-- onclick="return confirm('您确认要删除吗？')" -->
+							<!-- 删除END -->
+						</td>
+					</tr>
+				<% })%>
+				
+			</table>
+    <% include ./footer %>

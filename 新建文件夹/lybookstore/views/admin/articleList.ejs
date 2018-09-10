@@ -1,0 +1,133 @@
+<% include ./header %>
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">作品管理</a>
+        </li>
+        <li class="active">
+            <a href="">作品列表</a>
+        </li>
+    </ol>
+    <!-- 路径导航 END -->
+
+
+    <table class="table table-hover articleList">
+        <tr>
+            <td>封面</td>
+            <td>作品标题</td>
+            <td>栏目</td>
+            <td>发布时间</td>
+            <td>标签</td>
+            <td>作者</td>
+            <td>操作</td>
+        </tr>
+        <% articlelist.forEach(function(val){ %>
+            <tr id="tr">
+                <td>
+                    <div class="fm">
+                        <img src="/<%=val.imgurl%>" alt="">
+                    </div>
+                </td>
+                <td>
+                    <%=val.title%>
+                </td>
+                <td>
+                    <%=val.itemId.name %>
+                </td>
+                <td>
+                    <%=val.ctime.toLocaleString() %>
+                </td>
+                <td>
+                    <%=val.keywords %>
+                </td>
+                <td>
+                    <%=val.author%>
+                </td>
+                <td>
+                    <!-- 编辑 -->
+                        <a href="/admin/articleEdit/<%=val._id%>">编辑</a>
+                    <!-- 编辑END -->
+                    |
+                    <!-- 删除 -->
+                        <a href="/admin/articleRemove/<%=val._id%>">删除</a>
+                        <!-- 由于电脑不支持，所以未做弹框效果 -->
+                        <!-- onclick="return confirm('您确认要删除吗？')" -->
+                    <!-- 删除END -->
+                </td>
+            </tr>
+            <% })%>
+    </table>
+    
+    <!-- 分页 -->
+
+    <!-- 最大页码 -->
+    <!-- <%= maxPage %> -->
+
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li>
+            <a href="">&lt;&lt;</a>
+        </li>
+        
+
+
+      <!--   <li class="disabled">
+          <span>
+            <span aria-hidden="true">&laquo;</span>
+          </span>
+        </li> -->
+        <!-- 上一页 -->
+        <li>
+            <a href="/admin/articleList?page=<%=page-1%>" aria-label="Previous">
+                <span aria-hidden="true">&lt;</span>
+            </a>
+        </li>
+        <!-- 上一页END -->
+
+         <!-- for循环 -->
+        <% for(var i=1;i<=maxPage;i++){ %>
+           <!--  <li>
+                <span><%=i%><span class="sr-only">(current)</span></span>
+             </li> -->
+              <li>
+                 <a href="/admin/articleList?page=<%=i%>"><%=i%></a>
+             </li>
+        <% }%>
+       <!--  <li class="active">
+            <span>1 <span class="sr-only">(current)</span></span>
+        </li>
+        <li>
+            <span>2 <span class="sr-only">(current)</span></span>
+        </li>
+        <li>
+            <span>3 <span class="sr-only">(current)</span></span>
+        </li>
+        <li>
+            <span>4 <span class="sr-only">(current)</span></span>
+        </li>
+        <li>
+            <span>5 <span class="sr-only">(current)</span></span>
+        </li>
+        <li>
+             <span>6 <span class="sr-only">(current)</span></span>
+        </li> -->
+        <!-- 下一页 -->
+        <li>
+             <a href="/admin/articleList?page=<%=page+1%>" aria-label="Next">
+                <span aria-hidden="true">&gt;</span>
+            </a>
+        </li>
+        <li>
+            <a href="/admin/articleList?page=<%=maxPage%>">&gt;&gt;</a>
+        </li>
+
+        <!--  <li class="abled">
+          <span>
+            <span aria-hidden="true">&raquo;</span>
+          </span>
+        </li> -->
+        <!-- 下一页END -->
+      </ul>
+    </nav>
+    <!-- 分页END -->
+    <% include ./footer %>
